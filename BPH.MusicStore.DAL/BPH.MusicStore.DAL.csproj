@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E34DE3E9-ADFD-4478-A073-10B20CC42067}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BPH.MusicStore.DAL</RootNamespace>
+    <AssemblyName>BPH.MusicStore.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configurations\AlbumConfiguration.cs" />
+    <Compile Include="Configurations\ArtistConfiguration.cs" />
+    <Compile Include="Conventions\DateTime2Convention.cs" />
+    <Compile Include="Conventions\KeyConvention.cs" />
+    <Compile Include="Migrations\201604131051026_InitialCreate.cs" />
+    <Compile Include="Migrations\201604131051026_InitialCreate.Designer.cs">
+      <DependentUpon>201604131051026_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604131258421_ChangeDateTimeNull.cs" />
+    <Compile Include="Migrations\201604131258421_ChangeDateTimeNull.Designer.cs">
+      <DependentUpon>201604131258421_ChangeDateTimeNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604131307176_AddGenreToAlbum.cs" />
+    <Compile Include="Migrations\201604131307176_AddGenreToAlbum.Designer.cs">
+      <DependentUpon>201604131307176_AddGenreToAlbum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604131344070_ChangeFirstName.cs" />
+    <Compile Include="Migrations\201604131344070_ChangeFirstName.Designer.cs">
+      <DependentUpon>201604131344070_ChangeFirstName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604131348419_ChangeArtist.cs" />
+    <Compile Include="Migrations\201604131348419_ChangeArtist.Designer.cs">
+      <DependentUpon>201604131348419_ChangeArtist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604140802391_AddTitleToAlbum.cs" />
+    <Compile Include="Migrations\201604140802391_AddTitleToAlbum.Designer.cs">
+      <DependentUpon>201604140802391_AddTitleToAlbum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604140803185_AddCoverUrlToAlbum.cs" />
+    <Compile Include="Migrations\201604140803185_AddCoverUrlToAlbum.Designer.cs">
+      <DependentUpon>201604140803185_AddCoverUrlToAlbum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604140916596_ChangeDateTimeToDateTime2.cs" />
+    <Compile Include="Migrations\201604140916596_ChangeDateTimeToDateTime2.Designer.cs">
+      <DependentUpon>201604140916596_ChangeDateTimeToDateTime2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604151045094_AddRowVersionToAlbum.cs" />
+    <Compile Include="Migrations\201604151045094_AddRowVersionToAlbum.Designer.cs">
+      <DependentUpon>201604151045094_AddRowVersionToAlbum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604151054543_DropRowVersion.cs" />
+    <Compile Include="Migrations\201604151054543_DropRowVersion.Designer.cs">
+      <DependentUpon>201604151054543_DropRowVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604151055250_AddIsRowVersion.cs" />
+    <Compile Include="Migrations\201604151055250_AddIsRowVersion.Designer.cs">
+      <DependentUpon>201604151055250_AddIsRowVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604151230579_AddCreatedDateToBase.cs" />
+    <Compile Include="Migrations\201604151230579_AddCreatedDateToBase.Designer.cs">
+      <DependentUpon>201604151230579_AddCreatedDateToBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604151231385_AddModifiedDateToBase.cs" />
+    <Compile Include="Migrations\201604151231385_AddModifiedDateToBase.Designer.cs">
+      <DependentUpon>201604151231385_AddModifiedDateToBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="MusicStoreContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BPH.MusicStore.Models\BPH.MusicStore.Models.csproj">
+      <Project>{D5BB0C26-3F5A-473D-8F66-6060803AC0FD}</Project>
+      <Name>BPH.MusicStore.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201604131051026_InitialCreate.resx">
+      <DependentUpon>201604131051026_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604131258421_ChangeDateTimeNull.resx">
+      <DependentUpon>201604131258421_ChangeDateTimeNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604131307176_AddGenreToAlbum.resx">
+      <DependentUpon>201604131307176_AddGenreToAlbum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604131344070_ChangeFirstName.resx">
+      <DependentUpon>201604131344070_ChangeFirstName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604131348419_ChangeArtist.resx">
+      <DependentUpon>201604131348419_ChangeArtist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604140802391_AddTitleToAlbum.resx">
+      <DependentUpon>201604140802391_AddTitleToAlbum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604140803185_AddCoverUrlToAlbum.resx">
+      <DependentUpon>201604140803185_AddCoverUrlToAlbum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604140916596_ChangeDateTimeToDateTime2.resx">
+      <DependentUpon>201604140916596_ChangeDateTimeToDateTime2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604151045094_AddRowVersionToAlbum.resx">
+      <DependentUpon>201604151045094_AddRowVersionToAlbum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604151054543_DropRowVersion.resx">
+      <DependentUpon>201604151054543_DropRowVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604151055250_AddIsRowVersion.resx">
+      <DependentUpon>201604151055250_AddIsRowVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604151230579_AddCreatedDateToBase.resx">
+      <DependentUpon>201604151230579_AddCreatedDateToBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604151231385_AddModifiedDateToBase.resx">
+      <DependentUpon>201604151231385_AddModifiedDateToBase.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
